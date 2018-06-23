@@ -1,0 +1,5 @@
+---
+
+- name: restart network
+  shell: systemctl restart network
+
