@@ -115,4 +115,3 @@
   copy:
     src: files/etc/hosts
     dest: /etc/hosts
-
