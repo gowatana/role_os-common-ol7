@@ -1,5 +1,7 @@
 ---
 
 - name: restart network
-  shell: systemctl restart network
+  service:
+    name: network
+    state: restarted
 
