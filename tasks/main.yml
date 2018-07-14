@@ -26,14 +26,6 @@
   with_items:
     - NetworkManager-glib
 
-- name: Install Add-on RPMs.
-  yum:
-    name: "{{ item }}"
-    state: installed
-    enablerepo: ol7_latest,ol7_addons
-  with_items:
-    - jq
-
 - name: Set Static IP. {{ nic1 }}
   lineinfile:
     dest: /etc/sysconfig/network-scripts/ifcfg-{{ nic1 }}
