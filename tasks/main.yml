@@ -103,7 +103,3 @@
     src: files/etc/sysctl.d/ipv6.conf
     dest: /etc/sysctl.d/ipv6.conf
 
-- name: Copy /etc/hosts
-  copy:
-    src: files/etc/hosts
-    dest: /etc/hosts
