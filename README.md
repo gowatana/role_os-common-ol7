@@ -36,6 +36,15 @@ Role Variables
 
 ./vars/main.yml only.
 
+add vrars ./group_vars/all file.
+
+```
+lab_gateway: 192.168.1.1
+lab_domain: go-lab.jp
+lab_dns_1: 192.168.1.101
+lab_dns_2: 192.168.1.102
+
+```
 
 Dependencies
 ------------
