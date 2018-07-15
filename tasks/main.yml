@@ -96,4 +96,3 @@
   copy:
     src: files/etc/sysctl.d/ipv6.conf
     dest: /etc/sysctl.d/ipv6.conf
-
