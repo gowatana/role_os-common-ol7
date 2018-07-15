@@ -2,4 +2,4 @@
 - hosts: localhost
   remote_user: root
   roles:
-    - os-common-ol7
+    - gowatana.os-common-ol7
