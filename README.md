@@ -36,15 +36,6 @@ Role Variables
 
 ./vars/main.yml only.
 
-add vrars ./group_vars/all file.
-
-```
-lab_gateway: 192.168.1.1
-lab_domain: go-lab.jp
-lab_dns_1: 192.168.1.101
-lab_dns_2: 192.168.1.102
-
-```
 
 Dependencies
 ------------
@@ -59,7 +50,28 @@ Example Playbook
       roles:
          - gowatana.os-common-ol7
 
-ansible-playbook.
+
+## Ansible Galaxy role.
+
+Galaxy install
+
+```
+$ cd playbook
+$ ansible-galaxy install -p ./roles gowatana.os-common-ol7
+$ ansible-galaxy install --force -p ./roles gowatana.os-common-ol7
+```
+
+add vrars ./group_vars/all file.
+
+```
+lab_gateway: 192.168.1.1
+lab_domain: go-lab.jp
+lab_dns_1: 192.168.1.101
+lab_dns_2: 192.168.1.102
+
+```
+
+## Ansible Playbook.
 
 ```
 $ git clone https://github.com/gowatana/role_os-common-ol7.git
@@ -76,20 +88,12 @@ $ ansible-playbook -i hosts setup-ol7-os.yml -C
 $ ansible-playbook -i hosts setup-ol7-os.yml
 ```
 
-OS Reboot
+## OS Reboot
 
 ```
 $ ansible -i hosts -u root -a "uptime" all
 $ ansible -i hosts -u root -a "reboot" all
 $ ansible -i hosts -u root -a "uptime" all
-```
-
-Galaxy install
-
-```
-$ cd playbook
-$ ansible-galaxy install -p ./roles gowatana.os-common-ol7
-$ ansible-galaxy install --force -p ./roles gowatana.os-common-ol7
 ```
 
 License
